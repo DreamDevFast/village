@@ -1,0 +1,24 @@
+/* colors */
+$color-primary: #000;
+$lightgrey: #8d8d8d;
+$lightblue: #1d90b5;
+$darkblue: #166d89;
+$red: #d97271;
+$lightgreen: #4cdfab;
+$yellow: #ddd297;
+
+/* fonts */
+$font-open_sans: 'Open Sans', sans-serif;
+
+
+/* bootstrap overrides */
+$grid-breakpoints: (
+  xxs:  0,
+  xs:   414px,  // iPhone
+  sm:   576px,
+  md:   768px,
+  lg:   992px,
+  xl:   1200px,
+  xxl:  1600px, // larger desktops
+  xxxl: 1920px // largest desktops
+);

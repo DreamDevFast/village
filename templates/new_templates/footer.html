@@ -1,0 +1,57 @@
+{% load staticfiles %}
+
+<footer id="colophon" class="site-footer">
+    <div class="page-wrapper">
+
+        <div class="site-info">
+            <div class="logo-link">
+                <a href="#">
+                    <img class="img-fluid" src="{% static 'new_template/res/img/home/logo_grayscale.png' %}"
+                         alt="Villages">
+                </a>
+            </div>
+            <div class="footer-nav">
+
+                <div id="footer-navbar" class="menu-primary-navigation-container">
+                    <ul id="footer-menu" class="menu">
+                        <li class="menu-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'how_it_works' %}">About Us</a>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="legal">
+                    <span>&copy; 2017 - Villages</span>
+                    <a href="{% url 'privacy' %}">Privacy Policy &bullet; Terms of Service</a>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <ul class="social-navbar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://instagram.com/villages.io/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitter.com/villagesio"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://t.me/villagesio"><i class="fab fa-telegram" aria-hidden="true"></i></a>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/user/weboftrustnet/videos"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/villagescc/villagesio2.0"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div><!-- .site-info -->
+
+    </div>
+</footer><!-- #colophon -->

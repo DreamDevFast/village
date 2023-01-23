@@ -1,0 +1,23 @@
+{
+  "name": "villages",
+  "version": "1.0.0",
+  "description": "villages web app, html project",
+  "main": "index.js",
+  "repository": "https://github.com/RickCardoso/villages",
+  "author": "Rick Cardoso",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "vue": "^2.5.9"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-connect": "^5.5.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}

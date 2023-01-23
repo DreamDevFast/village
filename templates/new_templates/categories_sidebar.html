@@ -1,0 +1,54 @@
+{% load staticfiles categories %}
+
+{% get_all_categories as all_categories %}
+
+<!-- Categories-sidebar -->
+<aside class="app-sidebar">
+    <div class="cat-menu">
+        {% url 'frontend:home' as home_url %}
+        <a class="cat-item {% if home_url == request.path %}active{% endif %}"
+           href="{{ home_url }}">
+            <div class="cat-item-icon">
+                <img src="{% static 'new_template/res/img/icons/all_categories.png' %}"
+                     alt="All Categories">
+            </div>
+            <span class="cat-item-name">All Categories</span>
+        </a>
+
+        {% for category in all_categories %}
+            {% url 'frontend:home' type_filter=category.categories_text as category_url %}
+            <a class="cat-item {% if category_url == request.path %}active{% endif %}"
+               href="{{ category_url }}">
+                <div class="cat-item-icon">
+                    <img class="cat-item-icon" src="{% if category.icon %}{{ category.icon.url }}
+                            {% else %}{% static 'new_template/res/img/icons/products.png' %}{% endif %}"
+                         alt="{{ category.categories_text }}">
+                </div>
+                <span class="cat-item-name">{{ category.categories_text }}</span>
+            </a>
+        {% endfor %}
+
+    </div>
+               <nav id="social-navbar" style="display:none">
+                        <ul class="nav">
+                                  <li class="nav-item">
+                        <a class="nav-link" href="https://instagram.com/villages.io/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitter.com/villagesio"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://t.me/villagesio"><i class="fab fa-telegram" aria-hidden="true"></i></a>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/user/weboftrustnet/videos"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/villagescc/villagesio2.0"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    </li>
+
+                        </ul>
+                    </nav>
+</aside>
+
+<!-- End categories-sidebar -->
